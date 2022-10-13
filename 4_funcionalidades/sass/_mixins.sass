@@ -1,13 +1,3 @@
-@mixin special
-    color: red
-    background-color: yellow
-    padding: 10px
-    border: 1px solid red
-
-    &:hover
-        border-color: blue
-        color: blue
-
 @mixin green
     border-color: green
     color: green
@@ -18,3 +8,7 @@
 
 @mixin custom-border($style, $color, $width: 1px)
     border: $width $style $color
+
+@mixin colors($font: #000, $background: #fff)
+    color: $font
+    background-color: $background

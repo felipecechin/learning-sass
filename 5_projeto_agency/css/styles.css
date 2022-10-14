@@ -89,11 +89,6 @@ li {
 }
 @media (max-width: 640px) {
   #main-banner .nav-container {
-    padding: 1rem;
-  }
-}
-@media (max-width: 640px) {
-  #main-banner .nav-container-navigation {
     display: none;
   }
 }
@@ -105,11 +100,6 @@ li {
 @media (max-width: 768px) {
   #main-banner .nav-container .brand {
     font-size: 1.5rem;
-  }
-}
-@media (max-width: 640px) {
-  #main-banner .nav-container .brand {
-    font-size: 2rem;
   }
 }
 #main-banner .nav-container .brand:hover {
@@ -130,15 +120,66 @@ li {
 #main-banner .nav-container-navbar li a:hover {
   color: #ff5200;
 }
-#main-banner .nav-container .fas.fa-bars {
-  font-size: 2rem;
-  color: #fff;
+#main-banner .nav-container-mobile {
   display: none;
 }
 @media (max-width: 640px) {
-  #main-banner .nav-container .fas.fa-bars {
-    display: block;
+  #main-banner .nav-container-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: #000;
+    z-index: 10;
   }
+}
+#main-banner .nav-container-mobile .nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+#main-banner .nav-container-mobile .nav-header .brand {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  #main-banner .nav-container-mobile .nav-header .brand {
+    font-size: 1.5rem;
+  }
+}
+#main-banner .nav-container-mobile .nav-header .brand:hover {
+  color: #ff5200;
+}
+#main-banner .nav-container-mobile .nav-container-mobile-navigation .nav-container-mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
+}
+#main-banner .nav-container-mobile .nav-container-mobile-navigation .nav-container-mobile-navbar li {
+  border-top: 0.5px dotted #fff;
+}
+#main-banner .nav-container-mobile .nav-container-mobile-navigation .nav-container-mobile-navbar li a {
+  padding: 10px 0;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+#main-banner .nav-container-mobile .nav-container-mobile-navigation .nav-container-mobile-navbar li a:hover {
+  color: #ff5200;
+}
+#main-banner .nav-container-mobile .nav-block {
+  display: block;
+}
+#main-banner .nav-container-mobile .nav-none {
+  display: none;
+}
+#main-banner .nav-container-mobile .fas.fa-bars {
+  font-size: 2rem;
+  color: #fff;
 }
 #main-banner .title-container {
   color: #fff;

@@ -24,11 +24,7 @@
         z-index: 10
 
         @include mobile
-            padding: 1rem
-
-        &-navigation
-            @include mobile
-                display: none
+            display: none
 
         .brand
             color: $light-color
@@ -36,9 +32,6 @@
 
             @include medium
                 font-size: 1.5rem
-            
-            @include mobile
-                font-size: 2rem
 
             @include main-hover
 
@@ -53,14 +46,59 @@
                 a
                     color: $light-color
                     @include main-hover
+    
+    .nav-container-mobile
+        display: none
+
+        @include mobile
+            display: flex
+            flex-direction: column
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            padding: 1.5rem 2rem
+            background-color: $black
+            z-index: 10
+        
+        .nav-header
+            display: flex
+            justify-content: space-between
+
+            .brand
+                color: $light-color
+                font-size: 2rem
+
+                @include medium
+                    font-size: 1.5rem
+
+                @include main-hover
+        
+        .nav-container-mobile-navigation
+            .nav-container-mobile-navbar
+                display: flex
+                flex-direction: column
+                height: 100%
+                margin-top: 1rem
+
+                li
+                    border-top: 0.5px dotted $light-color
+
+                    a
+                        padding: 10px 0
+                        color: $light-color
+                        display: block
+                        @include main-hover
+            
+        .nav-block
+            display: block
+        
+        .nav-none
+            display: none
         
         .fas.fa-bars
             font-size: 2rem
             color: #fff
-            display: none
-
-            @include mobile
-                display: block
             
     .title-container
         color: $light-color

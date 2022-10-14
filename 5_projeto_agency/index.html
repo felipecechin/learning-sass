@@ -19,6 +19,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS do projeto-->
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleMenu() {
+            let menuToggle = document.getElementById('menu-mobile');
+            if (menuToggle.matches('.nav-none')) {
+                menuToggle.classList.remove('nav-none');
+                menuToggle.classList.add('nav-block');
+            } else {
+                menuToggle.classList.remove('nav-block');
+                menuToggle.classList.add('nav-none');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -47,7 +59,33 @@
                     </li>
                 </ul>
             </nav>
-            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-container-mobile">
+            <div class="nav-header">
+                <a href="#" class="brand">
+                    <i class="fas fa-brain"></i> Agency
+                </a>
+                <i class="fas fa-bars" onclick="toggleMenu()"></i>
+            </div>
+            <nav class="nav-container-mobile-navigation nav-none" id="menu-mobile">
+                <ul class="nav-container-mobile-navbar">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                    <li>
+                        <a href="#">Entrar</a>
+                    </li>
+                    <li>
+                        <a href="#">Registrar</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="title-container">
             <h2>Nós desenvolvemos</h2>

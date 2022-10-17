@@ -1,3 +1,5 @@
+@use 'sass:map'
+
 $a: 10
 
 @debug $a
@@ -25,3 +27,60 @@ $h: hidden
 
 h2
   display: $h
+  color: midnightblue
+
+@debug #f2ec44
+@debug blue
+@debug midnightblue
+@debug rgb(201, 50, 124)
+
+
+$list: 10, 20, 30
+@each $value in $list
+  @debug $value + 10
+
+@each $font in $list
+  p-#{$font}
+    font-size: $font + "px"
+
+$font-weights: ("regular": 400, "bold": 700, "black": 900)
+
+h3
+  font-weight: map.get($font-weights, "black")
+
+@each $key, $value in $font-weights
+  p-#{$key}
+    font-weight: $value
+
+@debug true
+@debug false
+
+$verdadeiro: true
+
+@debug $verdadeiro
+@debug 10 > 2
+
+@if 10 > 2
+  p
+    color: red
+@else 
+  p
+    color: blue
+
+@debug 10 == 10
+@debug 10 != 10
+
+$x : 20
+
+@if $x != 12
+  h1
+    font-size: $x + px
+
+@debug 10 > 10
+@debug 10>=10
+
+@debug 10 + 10
+@debug 100-20
+@debug 100px+12px
+@debug calc(100/2)
+@debug 12 % 3

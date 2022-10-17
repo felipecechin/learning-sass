@@ -1,0 +1,29 @@
+.color-1 {
+  color: #81717f;
+  background-color: #8171ed;
+}
+
+.color-2 {
+  background-color: #2d18ba;
+}
+
+.color-5 {
+  background-color: #313031;
+}
+
+.color-6 {
+  background-color: #3f3f3f;
+}
+
+.color-7 {
+  background-color: #4f2f3f;
+}
+.color-7:hover {
+  background-color: #e2ced8;
+}
+
+h1 {
+  border: 2px solid red;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -41,9 +41,36 @@
                 font-weight: 900
                 font-size: 3rem
 
+                @include base-mixins.large
+                    font-weight: 900
+                    font-size: 2.5rem
+                    display: flex
+                    align-items: center
+                    gap: 0.3rem
+
+                @include base-mixins.medium
+                    font-weight: 900
+                    font-size: 1.6rem
+                    display: flex
+                    align-items: center
+                    gap: 0.3rem
+
+                @include base-mixins.mobile
+                    font-weight: 900
+                    font-size: 3rem
+
                 i
                     color: variables.$primary-color
                     font-size: 2rem
+
+                    @include base-mixins.large
+                        font-size: 1.5rem
+                    
+                    @include base-mixins.medium
+                        font-size: 1rem
+
+                    @include base-mixins.mobile
+                        font-size: 2rem
 
             #search-form
                 display: flex
